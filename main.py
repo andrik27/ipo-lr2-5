@@ -1,7 +1,9 @@
+import math
 class_1 = int(input("Введите кол-во учащихся в 1 классе: "))
 class_2 = int(input("Введите кол-во учащихся во 2 классе: "))
 class_3 = int(input("Введите кол-во учащихся в 3 классе: "))
-sum = class_1 + class_2 + class_3 + 1 # например: sum = 15 -> sum//2 = 7, но парт надо 8,
-# по этому можно добавить 1 и кол-во парт будет в любом случае правильным
-parta = sum//2
-print("Нужно купить",parta,"парт.")
+d1 = math.ceil(class_1 / 2)
+d2 = math.ceil(class_2 / 2)
+d3 = math.ceil(class_3 / 2)
+d = d1 + d2 + d3
+print("Нужно купить",d,"парт.")
